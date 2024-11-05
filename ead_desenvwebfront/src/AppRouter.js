@@ -5,6 +5,11 @@ import Sobre from './paginas/Sobre';
 import NotFound from './paginas/NotFound';
 import Post from './paginas/Post';
 import NovoPost from './paginas/NovoPost';
+import Cliente from './paginas/Cliente';
+import Fornecedor from './paginas/Fornecedor';
+import Produtos from './paginas/Produtos';
+
+/*Importar a nova page*/
 
 const AppRouter = () => {
   return (
@@ -15,9 +20,13 @@ const AppRouter = () => {
         <Route path="/post/:postId" element={<Post />} />
         <Route path="/novopost" element={<NovoPost />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/cliente" element={<Cliente />} />
+        <Route path="/fornecedor" element={<Fornecedor />} />
+        <Route path="/Produtos" element={<Produtos />} />
+        
       </Routes>
     </Router>
   );
 };
-
+/*Definir a rota*/
 export default AppRouter;

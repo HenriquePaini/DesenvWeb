@@ -23,7 +23,7 @@ router.get(process.env.BASE_URL + '/api/v1/rest/post/:id',
         resp.json(data).status(200);
 });
 
-router.post(process.env.BASE_URL + '/api/v1/rest/post',
+router.post(process.env.BASE_URL + '/api/v1/rest/cliente',
     async function (req, resp){
 	    const Post = await model.Post.schema('public');
         const data = req.body;
