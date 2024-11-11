@@ -11,6 +11,36 @@ router.get(process.env.BASE_URL + '/api/v1/rest/reply',
         resp.json(data).status(200);
 });
 
+
+
+
+router.get(process.env.BASE_URL + '/api/v1/rest/fornecedor',
+    async function (req, resp){
+        let data = null;
+        const fornecedor = await model.fornecedor.schema('public');
+        data = await fornecedor.findAll();
+        resp.json(data).status(200);
+});
+
+router.get(process.env.BASE_URL + '/api/v1/rest/produtos',
+    async function (req, resp){
+        let data = null;
+        const produtos = await model.produtos.schema('public');
+        data = await produtos.findAll();
+        resp.json(data).status(200);
+});
+
+router.get(process.env.BASE_URL + '/api/v1/rest/cliente',
+    async function (req, resp){
+        let data = null;
+        const cliente = await model.cliente.schema('public');
+        data = await cliente.findAll();
+        resp.json(data).status(200);
+});
+
+
+
+
 router.get(process.env.BASE_URL + '/api/v1/rest/reply/:id',
     async function (req, resp){
         let data = null;
